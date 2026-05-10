@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>万里遐征 · 徐霞客游记</title>
+  <!-- 引入高德地图 JS API 2.0，用你的 key -->
+  <script src="https://webapi.amap.com/maps?v=2.0&key=1ca3bb0dcdb4900bb114085f24b3eb45"></script>
+  <!-- 引入 UI 组件库（可选，用来做信息窗体美化） -->
+  <script src="https://webapi.amap.com/ui/1.1/main.js"></script>
+  <!-- 样式文件 -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 地图容器 -->
+  <div id="map"></div>
+
+ <!-- 导入窗口 -->
+<div id="intro-modal">
+  <div class="intro-overlay"></div>
+  <div class="intro-card">
+    <div class="intro-content">
+      <div class="intro-text">
+        <p class="intro-desc"><strong>20岁</strong>出门远行</p>
+        <p class="intro-desc">最远走到过<strong>98°E</strong>的极边之城</p>
+        <p class="intro-num">考察过 <strong>376</strong> 个溶洞</p>
+        <p class="intro-num">记录过 <strong>1000</strong> 多座桥</p>
+        <p class="intro-desc"><strong>21</strong>个省份，<strong>4万</strong>余里</p>
+        <p class="intro-desc">布衣草鞋，一纸一笔</p>
+        <div class="intro-divider"></div>
+        <p class="intro-question">一个明朝人的穷游，<br>凭什么是中国地理学的巅峰？</p>
+        <p class="intro-subtitle">初代旅游博主|60万字“博客”带你看中国</p>
+      </div>
+      <div class="intro-image">
+        <img src="images/xuxiake.jpg" alt="徐霞客" />
+        <div class="intro-image-bar"></div>
+      </div>
+    </div>
+    <img id="intro-btn" class="intro-btn-img" src="images/button2.png" alt="进入地图" />
+  </div>
+</div>
+
+  <!-- 右侧图层切换控件 -->
+  <div id="layer-control">
+    <button class="layer-btn active" data-layer="satellite">🛰️ 卫星</button>
+    <button class="layer-btn" data-layer="vector">🗺️ 地图</button>
+  </div>
+
+  <!-- 左侧故事面板（和原来一样） -->
+  <div id="story-panel">
+    <h1 id="story-title">万里遐征·徐霞客</h1>
+    <div id="story-text"></div>
+    <div id="story-quote"></div>
+  </div>
+
+  <!-- 底部章节按钮 -->
+  <div id="chapter-nav">
+    <button class="chapter-btn active" data-chapter="1">一·少年立志探山河</button>
+    <button class="chapter-btn" data-chapter="2">二·纵横天下访名山</button>
+    <button class="chapter-btn" data-chapter="3">三·万里遐征终绝唱</button>
+    <button class="chapter-btn" data-chapter="4">四·精神不朽游记传</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
